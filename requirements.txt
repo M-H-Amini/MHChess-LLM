@@ -7,3 +7,5 @@ sentencepiece
 openpyxl
 chess
 cairosvg
+imageio
+openai
