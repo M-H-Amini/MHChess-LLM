@@ -3,8 +3,9 @@ from mh_chess import MHChess
 import random
 
 class MHRandom(MHAgent):
-    def __init__(self):
+    def __init__(self, color='white'):
         self.name = 'Random'
+        self.color = color  ##  Redundant, but for consistency with other agents...
 
     def makeMove(self, board):
         legal_moves = board.getLegalMoves()

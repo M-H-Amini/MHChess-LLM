@@ -4,11 +4,12 @@ from openai import OpenAI
 import openai
 
 class MHGPT(MHAgent):
-    def __init__(self, model_name='gpt3', key_file='openai_key.txt'):
+    def __init__(self, model_name='gpt3', key_file='openai_key.txt', color='white'):
         self.model_name = model_name
         self.name = self.getname()
         self.openai_key = open(key_file).read().strip().rstrip()
         self.client = OpenAI(api_key=self.openai_key)
+        self.color = color
     
     def getname(self):
         return 'gpt-3.5-turbo-0125'
@@ -25,7 +26,7 @@ class MHGPT(MHAgent):
 
 
     def generateResponse(self, prompt):
-        system_message = "You are a professional chess player. You are playing a game of chess. It's your turn to make a move. You will get a list of legal moves you can make. You should choose one of them. You should only output the UCI notation of the move you want to make with no additional text."
+        system_message = f"You are a professional chess player. You are playing a game of chess as {self.color}. P, N, B, R, Q and K represent white pieces. p, n, b, r, q and k represent black pieces. It's your turn to make a move. You will get a list of legal moves you can make. You should choose one of them. You should only output the UCI notation of the move you want to make with no additional text."
         response = self.client.chat.completions.create(
             model="gpt-3.5-turbo-0125",
             messages=[
@@ -41,7 +42,7 @@ class MHGPT(MHAgent):
         message = "Here's the current board state:\n\n" + str(board) + "\n\n"
         message += "Here's a list of possible moves:\n- "
         message += "\n- ".join(board.getLegalMoves()) + "\n\n"
-        message += "Please make a move by choosing one of the above options."
+        message += "Please make a move by choosing one of the above options. You should only output the UCI notation of the move you want to make with no additional text."
         return message
 
 if __name__ == "__main__":
