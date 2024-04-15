@@ -149,19 +149,21 @@ if __name__ == "__main__":
     from mh_random import MHRandom
     from mh_llama2 import MHLLama2
     from mh_gpt import MHGPT
+    from mh_mistral import MHMistral
 
     board = MHChess()
     # moves = board.getLegalMoves()
     # board.board2Image('test.png')
     agent_random = MHRandom()
-    agent_gpt = MHGPT()
+    # agent_gpt = MHGPT()
+    agent_mistral = MHMistral()
     # agent_llama2 = MHLLama2()
-    agent_white = agent_random
+    agent_white = agent_mistral
     agent_black = agent_random
     output_folder = f'{agent_white.name}_vs_{agent_black.name}'
     no = len(glob(f'{output_folder}*/'))
     output_folder += f'_{no:02d}'
-    fixture = MHFixture(board, agent_gpt, agent_random)
+    fixture = MHFixture(board, agent_white, agent_black)
     fixture.play(verbose=1)
     fixture.gif()
     
