@@ -10,6 +10,7 @@ from PIL import Image, ImageDraw, ImageFont
 from glob import glob
 from tqdm import tqdm
 from mh_chess import MHChess
+import numpy as np
 
 class MHFixture:
     def __init__(self, board, agent_white, agent_black, output_folder=None):
@@ -21,9 +22,9 @@ class MHFixture:
         self.white_rnd_no = 0  ##  Number of random moves by white
         self.black_rnd_no = 0  ##  Number of random moves by black
         if output_folder is None:
-            output_folder = f'{agent_white.name}_vs_{agent_black.name}'
-            no = len(glob(f'{output_folder}*/'))
-            output_folder = os.path.join('output', output_folder, f'_{no:02d}')
+            output_folder = os.path.join('output', f'{agent_white.name}_vs_{agent_black.name}')
+            no = len(glob(f'{output_folder}/*/'))
+            output_folder = os.path.join(output_folder, f'{no:02d}')
         self.output_folder = output_folder
 
     def play(self, verbose=0):
@@ -52,6 +53,9 @@ class MHFixture:
                 verbose and print('White turn:\n' + str(self.board), '\n')
             self.board2Image()
             self.cnt -=- 1
+            ##  For debugging...
+            # if self.cnt > 50:
+            #     break
 
         print(f'Game over: {self.board.result()}')
         print(f'White random moves: {self.white_rnd_no}')
@@ -59,13 +63,13 @@ class MHFixture:
         ##  Save the result...
         match self.board.outcome().winner:
             case chess.WHITE:
-                winner = self.agent_white.name
+                self.winner = self.agent_white.name
             case chess.BLACK:
-                winner = self.agent_black.name
+                self.winner = self.agent_black.name
             case None:
-                winner = 'Draw'
+                self.winner = 'Draw'
         with open(os.path.join('output', 'results.txt'), 'a') as f:
-            f.write(f'{self.agent_white.name}, {self.agent_black.name}, {winner}, {self.white_rnd_no}, {self.black_rnd_no}, {self.cnt}\n')
+            f.write(f'{self.agent_white.name}, {self.agent_black.name}, {self.winner}, {self.white_rnd_no}, {self.black_rnd_no}, {self.cnt}\n')
             
     def getCaption(self):
         return f'White: {self.agent_white.name} - Black: {self.agent_black.name}'
@@ -76,21 +80,70 @@ class MHFixture:
         os.makedirs(os.path.join(self.output_folder, 'images'), exist_ok=True)
         no = len(os.listdir(os.path.join(self.output_folder, 'images')))
         output_file = os.path.join(self.output_folder, 'images', f'{no:04d}.png')
-        self.board.board2Image(output_file, top_caption)
+        self.board.board2Image(output_file)
 
-    def gif(self, output_gif_path=None, duration=0.5):
+    def gif(self, output_gif_path=None, duration=0.5, top_caption=None):
         if output_gif_path is None:
             filename = self.agent_white.name + '_vs_' + self.agent_black.name 
             no = len(glob(os.path.join('output', f'{filename}*.gif')))
             output_gif_path = os.path.join('output', filename + f'_{no:02d}.gif')
+
+        
+        if top_caption is None:
+            top_caption = f' White: {self.agent_white.name} - Black: {self.agent_black.name}'
+        winner_caption = f' Winner: {self.winner}' if self.winner != 'Draw' else 'Result = Draw'
+        bottom_caption = ' MHChess - Github: M-H-Amini/MHChess'
 
         img_folder = os.path.join(self.output_folder, 'images')
         images = sorted([img for img in os.listdir(img_folder) if img.endswith(".png")])
         frames = []
         for image_filename in tqdm(images):
             image_path = os.path.join(img_folder, image_filename)
-            frames.append(imageio.imread(image_path))
+            image = self.editImage(image_path, winner_caption, top_caption, bottom_caption)
+            frames.append(image)
+            # frames.append(imageio.imread(image_path))
         imageio.mimsave(output_gif_path, frames, duration=duration)
+
+    def editImage(self, image_path, winner_caption=None, top_caption=None, bottom_caption=None):
+        if top_caption is None:
+            top_caption = 'MHChess - Github: M-H-Amini/MHChess'
+        if bottom_caption is None:
+            bottom_caption = 'MHChess - Github: M-H-Amini/MHChess'
+
+        image_org = Image.open(image_path)
+        ##  Add a black rectangle of 20 rows to the top of the image
+        image_rect = Image.new('RGB', (image_org.width, 20), color='black')
+        image = Image.new('RGB', (image_org.width, image_org.height + 60), color='white')
+        image.paste(image_rect, (0, 0))
+        image.paste(image_rect, (0, 20))
+        image.paste(image_org, (0, 40))
+        image.paste(image_rect, (0, image_org.height + 40))
+        draw = ImageDraw.Draw(image)
+        font_path="arial.ttf"
+        font_size=40
+        try:
+            font = ImageFont.truetype(font_path, font_size)
+        except IOError:
+            font = ImageFont.load_default()
+        font.size=40
+
+        ##  Winner caption
+        text_width, text_height = image.width, 20
+        x = (image.width - text_width) / 2
+        y = 0
+        draw.text((x, y), winner_caption, font=font, fill=(255, 255, 255))
+        ##  Top caption
+        text_width, text_height = image.width, 20
+        x = (image.width - text_width) / 2
+        y = 20 
+        draw.text((x, y), top_caption, font=font, fill=(0, 255, 0))
+        ##  Bottom caption
+        text_width, text_height = image.width, 10
+        x = (image.width - text_width) / 2
+        y = image.height - 15
+        draw.text((x, y), bottom_caption, font=font, fill='white')
+        image.save(image_path)
+        return image
 
     def log(self, text):
         log_file = os.path.join(self.output_folder, 'moves.log')
@@ -105,21 +158,24 @@ if __name__ == "__main__":
     from agents.mh_gpt import MHGPT
     from agents.mh_mistral import MHMistral
     from agents.mh_flant5 import MHFLANT5
+    n_fixtures = 1
     board = MHChess()
     # moves = board.getLegalMoves()
     # board.board2Image('test.png')
+    img_path = os.path.join('output', 'Mistral_vs_Random', '_00', 'images', '0000.png')
+    # board.gif()
     agent_random = MHRandom()
-    # agent_gpt = MHGPT()
-    # agent_mistral = MHMistral()
-    # agent_llama2 = MHLLama2()
-    agent_flant5 = MHFLANT5('google/flan-t5-base')
+    # # agent_gpt = MHGPT()
+    # # agent_mistral = MHMistral()
+    # # agent_llama2 = MHLLama2()
+    # agent_flant5 = MHFLANT5('google/flan-t5-base')
 
-    agent_white = agent_flant5
+    agent_white = agent_random
     agent_black = agent_random
     output_folder = f'{agent_white.name}_vs_{agent_black.name}'
-    no = len(glob(f'{output_folder}*/'))
-    output_folder += f'_{no:02d}'
-    fixture = MHFixture(board, agent_white, agent_black)
-    fixture.play(verbose=1)
-    fixture.gif()
+    for i in range(n_fixtures):
+        print(f'Fixture {i+1}/{n_fixtures}')
+        fixture = MHFixture(board, agent_white, agent_black)
+        fixture.play(verbose=1)
+        fixture.gif()
     
