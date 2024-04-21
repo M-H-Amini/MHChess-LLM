@@ -3,7 +3,7 @@
 
 <p align="center">
   <img src="output/gpt-4-turbo_vs_Random_00.gif" alt="GPT4 Draw" width="49%">
-  <img src="output/gpt-4-turbo_vs_Random_04.gif" alt="GPT4 Win" width="49%">
+  <img src="output/gpt-4-turbo_vs_Random_03.gif" alt="GPT4 Win" width="49%">
 </p>
 
 This repository explores whether current large language models (LLMs) are capable of planning in a zero-shot setting by engaging them in chess games against a random agent. This project includes various LLMs like GPT3.5, GPT4, Llama2, Llama3, Gemma, Mistral, and Flan-T5.
