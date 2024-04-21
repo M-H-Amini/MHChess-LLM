@@ -1,0 +1,626 @@
+White: g1h3 - I choose move g1h3.
+
+UCI notation: g1h3
+Black: h7h5 - h7h5
+White: h3g5 - I choose move h3g5.
+
+UCI notation: h3g5
+Black: h5h4 - h5h4
+White: g5h7 - g5h7
+Black: h8h7 - h8h7
+White: c2c3 - I choose move 10: c2c3.
+
+UCI notation: c2c3
+Black: f7f6 - f7f6
+White: d1a4 - I choose move d1a4.
+
+UCI notation: d1a4
+Black: h7h8 - h7h8
+White: a4d4 - a4d4
+Black: f6f5 - f6f5
+White: d4d7 - d4d7
+Black: b8d7 - b8d7
+White: e2e4 - e2e4
+Black: c7c6 - c7c6
+White: e4e5 - e4e5
+Black: a7a5 - a7a5
+White: e1e2 - e1e2
+Black: h8h5 - h8h5
+White: None - e2e4
+Black: d7f6 - d7f6
+White: None - e2e4
+Black: d8b6 - d8b6
+White: e2e1 - e2e1
+Black: b6e3 - b6e3
+White: e1d1 - e1d1
+Black: e3d2 - e3d2
+White: d1d2 - d1d2
+Black: e8d7 - e8d7
+White: d2d3 - d2d3
+Black: h4h3 - h4h3
+White: d3d4 - d3d4
+Black: f6e4 - f6e4
+White: d4e3 - d4e3
+Black: d7e6 - d7e6
+White: e3d4 - e3d4
+Black: g8h6 - g8h6
+White: d4e3 - d4e3
+Black: a8a6 - a8a6
+White: e3d4 - e3d4
+Black: g7g6 - g7g6
+White: d4e3 - d4e3
+Black: h6g8 - h6g8
+White: e3d4 - e3d4
+Black: f8g7 - f8g7
+White: d4d3 - d4d3
+Black: b7b6 - b7b6
+White: d3d4 - d3d4
+Black: a6a7 - a6a7
+White: d4d3 - d4d3
+Black: f5f4 - f5f4
+White: d3e4 - d3e4
+Black: a7c7 - a7c7
+White: e4f4 - e4f4
+Black: c8b7 - c8b7
+White: f4g4 - f4g4
+Black: h5f5 - h5f5
+White: g4h4 - I choose move g4h4.
+
+UCI notation: g4h4
+Black: b7c8 - b7c8
+White: h4g4 - h4g4
+Black: f5f8 - f5f8
+White: g4g5 - g4g5
+Black: e6d7 - e6d7
+White: g5g4 - I'll make the move g5g4.
+
+UCI notation: g5g4
+Black: f8f6 - f8f6
+White: g4g5 - g4g5
+Black: f6f8 - f6f8
+White: g5g4 - I'll make the move g5g4.
+
+UCI notation: g5g4
+Black: a5b4 - a5b4
+White: g4g5 - g4g5
+Black: g7h8 - g7h8
+White: g5g4 - I'll make the move g5g4.
+
+UCI notation: g5g4
+Black: d7e6 - d7e6
+White: g4g5 - g4g5
+Black: h8e5 - h8e5
+White: g5g4 - I choose move g5g4.
+
+UCI notation: g5g4
+Black: e5h8 - e5h8
+White: g4g5 - I'll make the move g4g5.
+
+UCI notation: g4g5
+Black: c7b7 - c7b7
+White: g5g4 - I choose move g5g4.
+
+UCI notation: g5g4
+Black: h8c3 - h8c3
+White: g4g5 - I choose move g4g5.
+
+UCI notation: g4g5
+Black: e6d6 - e6d6
+White: c1d2 - I choose move number 17: c1d2.
+
+UCI notation: d2
+Black: f8e8 - f8e8
+White: g2g4 - I choose move 17: g2g4
+Black: g8h6 - g8h6
+White: g5h6 - I'll make the move g5h6.
+
+g5h6
+Black: d6e6 - d6e6
+White: d2g5 - d2g5
+Black: b7d7 - b7d7
+White: g5f4 - I choose move g5f4.
+
+UCI notation: g5f4
+Black: c3h8 - c3h8
+White: f4g5 - f4g5
+Black: d7d8 - d7d8
+White: g5f4 - I'll make the move g5f4.
+
+UCI notation: g5f4
+Black: e8f8 - e8f8
+White: f4g5 - I choose move 17: f4g5.
+
+UCI notation: f4g5
+Black: d8d3 - d8d3
+White: g5f4 - I choose move number 14: g5f4.
+
+UCI notation: 1.g5f4
+Black: d3d1 - d3d1
+White: f4g5 - I choose move 17: f4g5.
+
+UCI notation: 17.f4g5
+Black: f8f6 - f8f6
+White: g5f4 - I choose move g5f4.
+
+UCI notation: g5f4
+Black: d1d5 - d1d5
+White: f4d6 - I'll make the move f4d6.
+
+UCI notation: f4d6
+Black: c8b7 - c8b7
+White: d6c5 - d6c5
+Black: d5f5 - d5f5
+White: b1c3 - b1c3
+Black: f5c5 - f5c5
+White: c3e4 - c3e4
+Black: c5b5 - c5b5
+White: e4d6 - e4d6
+Black: f6f5 - f6f5
+White: d6e4 - d6e4
+Black: h8f6 - h8f6
+White: e4g5 - e4g5
+Black: e6d7 - e6d7
+White: g5h7 - g5h7
+Black: f5f3 - f5f3
+White: h7f8 - I choose move h7f8.
+
+UCI notation: h7f8
+Black: d7e8 - d7e8
+White: f8h7 - f8h7
+Black: e7e5 - e7e5
+White: h7f8 - I choose move h7f8.
+
+UCI notation: e4
+Black: f3c3 - f3c3
+White: f8h7 - f8h7
+Black: e8d7 - e8d7
+White: h7f8 - h7f8
+Black: d7c7 - d7c7
+White: f8h7 - f8h7
+Black: b5c5 - b5c5
+White: h7f8 - h7f8
+Black: g6g5 - g6g5
+White: f8h7 - f8h7
+Black: c7c8 - c7c8
+White: h7f8 - h7f8
+Black: c3f3 - c3f3
+White: f8h7 - f8h7
+Black: c8d7 - c8d7
+White: h7f8 - h7f8
+Black: d7e8 - d7e8
+White: f8h7 - f8h7
+Black: f3b3 - f3b3
+White: h7f8 - h7f8
+Black: b7a8 - b7a8
+White: f8h7 - f8h7
+Black: c5a5 - c5a5
+White: h7f8 - h7f8
+Black: b3g3 - b3g3
+White: f8h7 - f8h7
+Black: g3c3 - g3c3
+White: h7f8 - h7f8
+Black: b6b5 - b6b5
+White: f8h7 - f8h7
+Black: a5a2 - a5a2
+White: h7f8 - h7f8
+Black: a2a1 - a2a1
+White: f8h7 - f8h7
+Black: e8e7 - e8e7
+White: h7f8 - h7f8
+Black: c3e3 - c3e3
+White: f8h7 - f8h7
+Black: a1a7 - a1a7
+White: h7f8 - h7f8
+Black: e7d8 - e7d8
+White: f8h7 - f8h7
+Black: a7d7 - a7d7
+White: h7f8 - h7f8
+Black: d7d2 - d7d2
+White: f8h7 - f8h7
+Black: e3a3 - e3a3
+White: h7f8 - h7f8
+Black: d8e7 - d8e7
+White: f8h7 - f8h7
+Black: f6h8 - f6h8
+White: h7f8 - h7f8
+Black: b5c4 - b5c4
+White: f8h7 - f8h7
+Black: c6c5 - c6c5
+White: h7f8 - h7f8
+Black: d2d1 - d2d1
+White: f8h7 - f8h7
+Black: e7e8 - e7e8
+White: h7f8 - h7f8
+Black: e8e7 - e8e7
+White: f8h7 - f8h7
+Black: d1d4 - d1d4
+White: h7f8 - h7f8
+Black: a3a2 - a3a2
+White: f8h7 - f8h7
+Black: a2a3 - a2a3
+White: h7f8 - h7f8
+Black: a3g3 - a3g3
+White: f8h7 - f8h7
+Black: a8c6 - a8c6
+White: h7f8 - h7f8
+Black: g3d3 - g3d3
+White: f8h7 - f8h7
+Black: d4e4 - d4e4
+White: h7f8 - h7f8
+Black: c6e8 - c6e8
+White: f8h7 - f8h7
+Black: e4g4 - e4g4
+White: h7f8 - h7f8
+Black: e8f7 - e8f7
+White: f8h7 - f8h7
+Black: d3f3 - d3f3
+White: h7f8 - h7f8
+Black: f3f6 - f3f6
+White: h6h7 - h6h7
+Black: f6b6 - f6b6
+White: f8d7 - f8d7
+Black: b6b5 - b6b5
+White: d7f6 - d7f6
+Black: b5b7 - b5b7
+White: f6g4 - f6g4
+Black: b7b6 - b7b6
+White: g4e5 - g4e5
+Black: f7e8 - f7e8
+White: e5g4 - e5g4
+Black: b6h6 - b6h6
+White: h7g8 - h7g8
+Black: h8a1 - h8a1
+White: g4e5 - g4e5
+Black: e7f6 - e7f6
+White: e5f7 - e5f7
+Black: a1e5 - a1e5
+White: f7d8 - f7d8
+Black: h6g6 - h6g6
+White: g8h8 - g8h8
+Black: b4b3 - b4b3
+White: d8f7 - d8f7
+Black: e8b5 - e8b5
+White: f7d8 - f7d8
+Black: f6f5 - f6f5
+White: h8h7 - h8h7
+Black: e5c7 - e5c7
+White: d8f7 - d8f7
+Black: f5e6 - f5e6
+White: f7h6 - f7h6
+Black: b5e8 - b5e8
+White: h6g4 - h6g4
+Black: e6f5 - e6f5
+White: g4e5 - g4e5
+Black: e8a4 - e8a4
+White: e5g4 - e5g4
+Black: g6b6 - g6b6
+White: h7h8 - h7h8
+Black: a4d7 - a4d7
+White: h8g8 - h8g8
+Black: c7f4 - c7f4
+White: g8h8 - g8h8
+Black: f4c1 - f4c1
+White: g4e5 - I choose move g4e5.
+
+UCI notation: g4e5
+Black: d7c8 - d7c8
+White: e5g4 - e5g4
+Black: b6g6 - b6g6
+White: g4e5 - g4e5
+Black: f5f6 - f5f6
+White: e5g4 - e5g4
+Black: f6e7 - f6e7
+White: g4e5 - g4e5
+Black: c1e3 - c1e3
+White: e5g4 - e5g4
+Black: e7d6 - e7d6
+White: g4e5 - g4e5
+Black: c8a6 - c8a6
+White: e5g4 - e5g4
+Black: a6b5 - a6b5
+White: g4e5 - g4e5
+Black: d6d5 - d6d5
+White: e5g4 - e5g4
+Black: g6c6 - g6c6
+White: g4e5 - I choose move g4e5.
+
+UCI notation: g4e5
+Black: c6g6 - c6g6
+White: e5g4 - e5g4
+Black: e3d4 - e3d4
+White: g4e5 - g4e5
+Black: c4c3 - c4c3
+White: h8h7 - h8h7
+Black: c5c4 - c5c4
+White: e5g4 - e5g4
+Black: d5e4 - d5e4
+White: g4e5 - g4e5
+Black: d4b6 - d4b6
+White: e5g4 - e5g4
+Black: e4d5 - e4d5
+White: g4e5 - g4e5
+Black: b6a7 - b6a7
+White: e5f3 - e5f3
+Black: b5a4 - b5a4
+White: f3g5 - f3g5
+Black: g6h6 - g6h6
+White: h7g8 - h7g8
+Black: a7f2 - a7f2
+White: g8f8 - g8f8
+Black: c3c2 - c3c2
+White: f8g8 - f8g8
+Black: f2b6 - f2b6
+White: g8f8 - g8f8
+Black: d5c5 - d5c5
+White: f8g8 - f8g8
+Black: h6e6 - h6e6
+White: g8h8 - g8h8
+Black: b6c7 - b6c7
+White: h8g8 - h8g8
+Black: a4e8 - a4e8
+White: g8h8 - g8h8
+Black: e6d6 - e6d6
+White: g5h7 - I choose move g5h7.
+
+UCI notation: g5h7
+Black: d6d3 - d6d3
+White: h8g8 - h8g8
+Black: c7h2 - c7h2
+White: g8h8 - I choose move g8h8.
+
+UCI notation: G8H8
+Black: d3f3 - d3f3
+White: h8g8 - h8g8
+Black: e8c6 - e8c6
+White: g8h8 - I'll make the move g8h8.
+
+UCI notation: g8h8
+Black: c2c1q - c2c1q
+White: h8g8 - h8g8
+Black: c5b4 - c5b4
+White: g8h8 - I choose move g8h8.
+
+UCI notation: g8h8
+Black: c1b1 - c1b1
+White: h8g8 - h8g8
+Black: c6b7 - c6b7
+White: h7f8 - I choose move h7f8.
+
+UCI notation: h7f8
+Black: f3f8 - f3f8
+White: g8f8 - g8f8
+Black: h2c7 - h2c7
+White: f8g8 - f8g8
+Black: b4a4 - b4a4
+White: g8h8 - g8h8
+Black: b7g2 - b7g2
+White: h8g8 - h8g8
+Black: g2c6 - g2c6
+White: g8h8 - I choose move g8h8.
+
+UCI notation: g8h8
+Black: c7g3 - c7g3
+White: h8g8 - h8g8
+Black: b1b2 - b1b2
+White: g8f8 - g8f8
+Black: b2f2 - b2f2
+White: f8g7 - f8g7
+Black: f2h2 - f2h2
+White: g7h8 - g7h8
+Black: c6e4 - c6e4
+White: h8g8 - h8g8
+Black: g3d6 - g3d6
+White: g8h8 - g8h8
+Black: h2g1 - h2g1
+White: f1c4 - I choose move f1c4.
+
+UCI notation: f1c4
+Black: h3h2 - h3h2
+White: c4d5 - c4d5
+Black: g1d4 - g1d4
+White: h8g8 - h8g8
+Black: d4c3 - d4c3
+White: d5e4 - d5e4
+Black: c3c5 - c3c5
+White: e4f5 - e4f5
+Black: d6f8 - d6f8
+White: f5g4 - f5g4
+Black: c5c8 - c5c8
+White: g4e2 - g4e2
+Black: a4b4 - a4b4
+White: e2g4 - e2g4
+Black: c8d8 - c8d8
+White: g4e2 - g4e2
+Black: d8f6 - d8f6
+White: e2g4 - e2g4
+Black: f6b6 - f6b6
+White: g4h5 - g4h5
+Black: b6c7 - b6c7
+White: g8h8 - g8h8
+Black: c7d6 - c7d6
+White: h5g4 - h5g4
+Black: d6d3 - d6d3
+White: g4e2 - g4e2
+Black: b4b5 - b4b5
+White: e2g4 - e2g4
+Black: d3f5 - d3f5
+White: g4f5 - I choose move g4f5.
+
+UCI notation: g4f5
+Black: b5b4 - b5b4
+White: f5g4 - f5g4
+Black: f8h6 - f8h6
+White: g4e2 - g4e2
+Black: b3b2 - b3b2
+White: e2g4 - e2g4
+Black: h6d2 - h6d2
+White: g4e6 - I choose move g4e6.
+
+UCI notation: g4e6
+Black: b4c5 - b4c5
+White: e6g4 - e6g4
+Black: c5d5 - c5d5
+White: g4e2 - g4e2
+Black: d2h6 - d2h6
+White: e2g4 - e2g4
+Black: d5e4 - d5e4
+White: g4e2 - g4e2
+Black: e4d5 - e4d5
+White: e2g4 - e2g4
+Black: d5d4 - d5d4
+White: g4e2 - g4e2
+Black: h6g7 - h6g7
+White: h8g8 - h8g8
+Black: d4e3 - d4e3
+White: e2g4 - e2g4
+Black: g7e5 - g7e5
+White: g8f8 - g8f8
+Black: e5h8 - e5h8
+White: g4e6 - I choose move g4e6.
+
+UCI notation: g4e6
+Black: e3f3 - e3f3
+White: e6g4 - e6g4
+Black: f3f2 - f3f2
+White: g4e6 - g4e6
+Black: b2b1b - b2b1b
+White: e6g4 - e6g4
+Black: b1f5 - b1f5
+White: f8g8 - f8g8
+Black: h8c3 - h8c3
+White: g4h5 - g4h5
+Black: f5b1 - f5b1
+White: h5g4 - h5g4
+Black: c3b2 - c3b2
+White: g4f5 - g4f5
+Black: b2e5 - b2e5
+White: f5g4 - f5g4
+Black: e5f6 - e5f6
+White: g4f3 - g4f3
+Black: b1a2 - b1a2
+White: g8f8 - g8f8
+Black: a2c4 - a2c4
+White: f3e4 - f3e4
+Black: f6b2 - f6b2
+White: e4f5 - e4f5
+Black: f2g3 - f2g3
+White: f5g4 - f5g4
+Black: b2d4 - b2d4
+White: g4e2 - g4e2
+Black: c4b3 - c4b3
+White: None - e2e4
+Black: b3f7 - b3f7
+White: d1h5 - d1h5
+Black: f7h5 - f7h5
+White: f8g8 - f8g8
+Black: g3g2 - g3g2
+White: g8f8 - g8f8
+Black: g2g3 - g2g3
+White: f8g8 - f8g8
+Black: d4e5 - d4e5
+White: g8f8 - g8f8
+Black: h5f3 - h5f3
+White: f8g8 - f8g8
+Black: f3g4 - f3g4
+White: g8f8 - g8f8
+Black: g3f3 - g3f3
+White: f8g8 - f8g8
+Black: g4h3 - g4h3
+White: g8f8 - g8f8
+Black: e5c7 - e5c7
+White: f8g8 - f8g8
+Black: c7b8 - c7b8
+White: g8h8 - g8h8
+Black: b8f4 - b8f4
+White: h8g8 - h8g8
+Black: h3c8 - h3c8
+White: g8h8 - g8h8
+Black: c8e6 - c8e6
+White: h1f1 - h1f1
+Black: f3g3 - f3g3
+White: f1f4 - f1f4
+Black: h2h1b - h2h1b
+White: f4f5 - f4f5
+Black: h1f3 - h1f3
+White: f5f4 - f5f4
+Black: e6c4 - e6c4
+White: h8h7 - h8h7
+Black: c4e6 - c4e6
+White: h7h8 - h7h8
+Black: f3h5 - f3h5
+White: f4f5 - f4f5
+Black: h5e2 - h5e2
+White: h8h7 - h8h7
+Black: g3h2 - g3h2
+White: h7h8 - h7h8
+Black: e2d1 - e2d1
+White: f5f4 - f5f4
+Black: e6d5 - e6d5
+White: f4f5 - f4f5
+Black: h2g1 - h2g1
+White: h8h7 - h8h7
+Black: d5b3 - d5b3
+White: h7h8 - h7h8
+Black: b3a2 - b3a2
+White: f5f4 - I choose move f5f4.
+
+UCI notation: f5f4
+Black: g1h2 - g1h2
+White: f4f5 - f4f5
+Black: a2g8 - a2g8
+White: h8g8 - h8g8
+Black: h2g2 - h2g2
+White: g8h8 - g8h8
+Black: d1b3 - d1b3
+White: f5f4 - I choose move f5f4.
+
+UCI notation: f5f4
+Black: g2h2 - g2h2
+White: f4f5 - f4f5
+Black: b3d1 - b3d1
+White: h8g8 - h8g8
+Black: d1h5 - d1h5
+White: g8h8 - g8h8
+Black: h5e2 - h5e2
+White: h8g8 - h8g8
+Black: e2a6 - e2a6
+White: g8h8 - g8h8
+Black: h2g1 - h2g1
+White: f5f4 - I choose move f5f4.
+
+UCI notation: f5f4
+Black: a6b5 - a6b5
+White: f4f5 - I choose move f4f5.
+
+UCI notation: f4f5
+Black: b5c6 - b5c6
+White: h8g8 - h8g8
+Black: g1h1 - g1h1
+White: g8h8 - g8h8
+Black: c6f3 - c6f3
+White: h8g8 - h8g8
+Black: f3g2 - f3g2
+White: g8h8 - g8h8
+Black: g2c6 - g2c6
+White: h8g8 - h8g8
+Black: c6e4 - c6e4
+White: g8h8 - g8h8
+Black: h1g2 - h1g2
+White: h8g8 - h8g8
+Black: e4c6 - e4c6
+White: g8f8 - g8f8
+Black: g2g1 - g2g1
+White: f5f7 - f5f7
+Black: c6f3 - c6f3
+White: f8g8 - f8g8
+Black: f3d1 - f3d1
+White: g8h8 - g8h8
+Black: d1a4 - d1a4
+White: h8g8 - h8g8
+Black: g1h1 - g1h1
+White: g8h8 - g8h8
+Black: a4c6 - a4c6
+White: h8g8 - h8g8
+Black: c6d5 - c6d5
+White: g8h8 - g8h8
+Black: d5f7 - d5f7

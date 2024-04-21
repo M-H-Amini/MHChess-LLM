@@ -1,7 +1,9 @@
 llama
 __pycache__
-output
+output/*/*.png
 *.png
 *.gif
 openai_key.txt
 temp.py
+!output/*.gif
+!output/*.txt
