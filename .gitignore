@@ -4,3 +4,4 @@ output
 *.png
 *.gif
 openai_key.txt
+temp.py

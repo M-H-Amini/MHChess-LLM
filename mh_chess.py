@@ -23,16 +23,9 @@ class MHChess(chess.Board):
     def currentPlayer(self):
         return self.turn
 
-    def board2Image(self, output_file, top_caption=None):
-        if top_caption is None:
-            top_caption = 'MHChess - Github: M-H-Amini/MHChess'
-        bottom_caption = 'MHChess - Github: M-H-Amini/MHChess'
+    def board2Image(self, output_file):
         svg = chess.svg.board(self)
-        # cairosvg.svg2png(bytestring=svg.encode('utf-8'), write_to=output_file)
-        png_bytes = cairosvg.svg2png(bytestring=svg.encode('utf-8'))
-        ##  Save the image...
-        with open(output_file, 'wb') as f:
-            f.write(png_bytes)
+        cairosvg.svg2png(bytestring=svg.encode('utf-8'), write_to=output_file)
 
 if __name__ == "__main__":
     from agents.mh_random import MHRandom

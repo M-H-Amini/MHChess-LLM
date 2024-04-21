@@ -53,9 +53,6 @@ class MHFixture:
                 verbose and print('White turn:\n' + str(self.board), '\n')
             self.board2Image()
             self.cnt -=- 1
-            ##  For debugging...
-            # if self.cnt > 50:
-            #     break
 
         print(f'Game over: {self.board.result()}')
         print(f'White random moves: {self.white_rnd_no}')
@@ -111,7 +108,7 @@ class MHFixture:
             bottom_caption = 'MHChess - Github: M-H-Amini/MHChess'
 
         image_org = Image.open(image_path)
-        ##  Add a black rectangle of 20 rows to the top of the image
+        ##  Adding a black rectangle of 20 rows to the top of the image...
         image_rect = Image.new('RGB', (image_org.width, 20), color='black')
         image = Image.new('RGB', (image_org.width, image_org.height + 60), color='white')
         image.paste(image_rect, (0, 0))
@@ -127,18 +124,25 @@ class MHFixture:
             font = ImageFont.load_default()
         font.size=40
 
-        ##  Winner caption
-        text_width, text_height = image.width, 20
+        ##  Winner caption...
+        bbox = draw.textbbox((0, 0), winner_caption, font=font)
+        text_width = bbox[2] - bbox[0]
+        text_height = bbox[3] - bbox[1]
+        # text_width, text_height = image.width, 20
         x = (image.width - text_width) / 2
         y = 0
-        draw.text((x, y), winner_caption, font=font, fill=(255, 255, 255))
-        ##  Top caption
-        text_width, text_height = image.width, 20
+        draw.text((x, y), winner_caption, font=font, fill=(0, 255, 0))
+        ##  Top caption...
+        bbox = draw.textbbox((0, 0), top_caption, font=font)
+        text_width = bbox[2] - bbox[0]
+        text_height = bbox[3] - bbox[1]
         x = (image.width - text_width) / 2
         y = 20 
-        draw.text((x, y), top_caption, font=font, fill=(0, 255, 0))
-        ##  Bottom caption
-        text_width, text_height = image.width, 10
+        draw.text((x, y), top_caption, font=font, fill=(255, 255, 255))
+        ##  Bottom caption...
+        bbox = draw.textbbox((0, 0), bottom_caption, font=font)
+        text_width = bbox[2] - bbox[0]
+        text_height = bbox[3] - bbox[1]
         x = (image.width - text_width) / 2
         y = image.height - 15
         draw.text((x, y), bottom_caption, font=font, fill='white')
@@ -155,27 +159,33 @@ class MHFixture:
 if __name__ == "__main__":
     from agents.mh_random import MHRandom
     from agents.mh_llama2 import MHLLama2
+    from agents.mh_llama3 import MHLLama3
     from agents.mh_gpt import MHGPT
     from agents.mh_mistral import MHMistral
     from agents.mh_flant5 import MHFLANT5
-    n_fixtures = 1
-    board = MHChess()
-    # moves = board.getLegalMoves()
-    # board.board2Image('test.png')
-    img_path = os.path.join('output', 'Mistral_vs_Random', '_00', 'images', '0000.png')
-    # board.gif()
+    from agents.mh_gemma import MHGemma
+    
+    n_fixtures = 5
     agent_random = MHRandom()
-    # # agent_gpt = MHGPT()
-    # # agent_mistral = MHMistral()
-    # # agent_llama2 = MHLLama2()
+    # agent_mistral = MHMistral()
+    # agent_llama2 = MHLLama2()
+    # agent_llama2 = MHLLama2(model_name='meta-llama/Llama-2-70b-chat-hf')
+    # agent_llama3 = MHLLama3()
+    agent_llama3 = MHLLama3(model_name='meta-llama/Meta-Llama-3-70B-Instruct')
     # agent_flant5 = MHFLANT5('google/flan-t5-base')
+    # agent_flant5 = MHFLANT5('google/flan-t5-large')
+    # agent_flant5 = MHFLANT5('google/flan-t5-xl')
+    # agent_flant5 = MHFLANT5('google/flan-t5-xxl')
+    # agent_gemma = MHGemma()
+    # agent_gpt = MHGPT()
+    # agent_gpt = MHGPT(model_name='gpt-4-turbo')
 
-    agent_white = agent_random
+    agent_white = agent_llama3
     agent_black = agent_random
-    output_folder = f'{agent_white.name}_vs_{agent_black.name}'
     for i in range(n_fixtures):
         print(f'Fixture {i+1}/{n_fixtures}')
+        board = MHChess()
         fixture = MHFixture(board, agent_white, agent_black)
         fixture.play(verbose=1)
         fixture.gif()
-    
+        

@@ -4,7 +4,7 @@ from openai import OpenAI
 import openai
 
 class MHGPT(MHAgent):
-    def __init__(self, model_name='gpt3', key_file='openai_key.txt', color='white'):
+    def __init__(self, model_name='gpt-3.5-turbo', key_file='openai_key.txt', color='white'):
         self.model_name = model_name
         self.name = self.getname()
         self.openai_key = open(key_file).read().strip().rstrip()
@@ -12,7 +12,7 @@ class MHGPT(MHAgent):
         self.color = color
     
     def getname(self):
-        return 'gpt-3.5-turbo-0125'
+        return self.model_name
 
     def makeMove(self, board):
         prompt = self.generatePrompt(board)
@@ -28,7 +28,7 @@ class MHGPT(MHAgent):
     def generateResponse(self, prompt):
         system_message = f"You are a professional chess player. You are playing a game of chess as {self.color}. P, N, B, R, Q and K represent white pieces. p, n, b, r, q and k represent black pieces. It's your turn to make a move. You will get a list of legal moves you can make. You should choose one of them. You should only output the UCI notation of the move you want to make with no additional text."
         response = self.client.chat.completions.create(
-            model="gpt-3.5-turbo-0125",
+            model=self.model_name,
             messages=[
                 {"role": "system", "content": system_message},
                 {"role": "user", "content": prompt}

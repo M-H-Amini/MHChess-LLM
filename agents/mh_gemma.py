@@ -13,7 +13,7 @@ class MHGemma(MHAgent):
         self.color = color
 
     def getname(self):
-        return 'Mistral'
+        return 'Gemma-7b'
 
     def makeMove(self, board):
         prompt = self.generatePrompt(board)

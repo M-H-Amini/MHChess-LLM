@@ -1,4 +1,6 @@
 from transformers import AutoTokenizer, LlamaForCausalLM
+import sys 
+sys.path.append('/usr/src/app')
 from mh_agent import MHAgent
 from mh_chess import MHChess
 
@@ -15,6 +17,8 @@ class MHLLama2(MHAgent):
             return 'Llama2-7b-chat'
         elif '70b-chat' in self.model_name:
             return 'Llama2-70b-chat'
+        elif 'Llama-3' in self.model_name and '8B' in self.model_name:
+            return 'Llama3-8B'
 
     def makeMove(self, board):
         prompt = self.generatePrompt(board)
@@ -45,7 +49,8 @@ class MHLLama2(MHAgent):
 
 
 if __name__ == "__main__":
-    mh_llama2 = MHLLama2()
+    model_name = 'meta-llama/Meta-Llama-3-8B'
+    mh_llama2 = MHLLama2(model_name=model_name)
     board = MHChess()
     for i in range(10):
         move, status, ans = mh_llama2.makeMove(board)
